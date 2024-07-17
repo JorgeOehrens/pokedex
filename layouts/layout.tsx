@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import ThemeToggle from "@/components/ThemeToggle";
 
 type Props = {
   children?: ReactNode;
@@ -22,7 +23,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
         <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
           <li >
             
-          <Link className="hover:text-gray-500" href="/">Inicio</Link>
+          <Link className="hover:text-gray-500 " href="/">Inicio</Link>
           </li>
           <li>
           <Link className="hover:text-gray-500" href="/pokedex">Pokedex</Link>
@@ -46,6 +47,11 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
           </li>
 
         </ul>
+
+      </div>
+      <div>
+
+        <ThemeToggle/>
 
       </div>
     </nav>
